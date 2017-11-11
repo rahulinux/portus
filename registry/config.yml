@@ -9,20 +9,3 @@ http:
   debug:
     addr: 0.0.0.0:5001
   addr: :5000
-  host: FQDN
-  tls:
-    certificate: /secrets/portus.crt
-    key: /secrets/portus.key
-auth:
-  token:
-    realm: https://FQDN/v2/token
-    service: FQDN 
-    issuer: FQDN
-    rootcertbundle: /secrets/portus.crt
-notifications:
-  endpoints:
-    - name: portus
-      url: https://FQDN/v2/webhooks/events
-      timeout: 500ms
-      threshold: 5
-      backoff: 1s
